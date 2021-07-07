@@ -2,6 +2,9 @@ import Expenses from "./components/Expenses";
 import NewExpense from "./components/NewExpense";
 
 function App() {
+	const onRetrieveExpenseDataHandler = (retrievedExpenseData) => {
+		console.log(retrievedExpenseData);
+	}
 	const expenses = [
 		{
 			id: "e1",
@@ -25,7 +28,7 @@ function App() {
 	];
 	return (
 		<div className="">
-			<NewExpense />
+			<NewExpense onRetrieveExpenseData={onRetrieveExpenseDataHandler}/>
       		<Expenses items={expenses}/>
 		</div>
 	);
