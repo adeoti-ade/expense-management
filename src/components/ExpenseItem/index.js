@@ -4,7 +4,6 @@ import './style.css';
 import ExpenseDate from '../ExpenceDate';
 import Card from '../Card';
 const ExpenseItem = props => {
-
     const {date:expenseDate, amount:expensePrice} = props;
     const [expenseTitle, setExpenseTitle] = useState(props.title);
 
